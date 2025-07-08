@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - HomeGrownShrooms</title>
+    <style>
+        /* Reuse the same styles from the main page */
+        :root {
+            --earth-brown: #8D6E63;
+            --forest-green: #4CAF50;
+            --cream-white: #FAFAFA;
+            --fungi-orange: #FFA726;
+            --mushroom-gray: #B0BEC5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cream-white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: var(--earth-brown);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--earth-brown);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--forest-green);
+        }
+        
+        /* Terms of Service Specific Styles */
+        .terms-header {
+            background-color: var(--forest-green);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .terms-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .terms-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        
+        .terms-section {
+            margin-bottom: 40px;
+        }
+        
+        .terms-section h2 {
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid var(--mushroom-gray);
+            padding-bottom: 10px;
+        }
+        
+        .terms-section h3 {
+            color: var(--forest-green);
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        .terms-section h4 {
+            color: var(--earth-brown);
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        
+        .terms-section p {
+            margin-bottom: 15px;
+        }
+        
+        .terms-section ul, .terms-section ol {
+            margin: 15px 0 15px 40px;
+        }
+        
+        .terms-section ul li, .terms-section ol li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--forest-green);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .update-date {
+            font-style: italic;
+            color: #666;
+            text-align: right;
+            margin-top: 30px;
+        }
+        
+        footer {
+            background-color: var(--earth-brown);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 30px;
+            }
+            
+            .terms-header h1 {
+                font-size: 32px;
+            }
+            
+            .terms-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>HomeGrownShrooms</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="terms-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Last Updated: July 6, 2023</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="terms-content">
+            <div class="terms-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to HomeGrownShrooms ("Company," "we," "our," or "us"). These Terms of Service ("Terms") govern your access to and use of our website homegrownshrooms.com (the "Site") and our mushroom growing kits and related products (the "Products").</p>
+                
+                <p>By accessing or using our Site or purchasing our Products, you ("Customer," "you," or "your") agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Site or purchase Products.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> These Terms contain important information about your legal rights, remedies, and obligations, including various limitations and exclusions, and provisions that govern the resolution of disputes through arbitration rather than in court.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Eligibility</h2>
+                <p>To use our Site or purchase our Products, you must:</p>
+                <ul>
+                    <li>Be at least 18 years of age or the legal age of majority in your jurisdiction</li>
+                    <li>Have the legal capacity to enter into a binding contract</li>
+                    <li>Reside in a jurisdiction where our Products may be legally sold and possessed</li>
+                </ul>
+                
+                <p>By using the Site or purchasing Products, you represent and warrant that you meet all eligibility requirements. We reserve the right to refuse service, terminate accounts, or cancel orders at our sole discretion.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Account Registration</h2>
+                <p>Certain features of our Site may require you to register for an account. When registering, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Maintain the security of your password and accept all risks of unauthorized access</li>
+                    <li>Notify us immediately if you discover or suspect any security breaches</li>
+                    <li>Take responsibility for all activities that occur under your account</li>
+                </ul>
+                
+                <p>We reserve the right to suspend or terminate your account if any information provided proves to be inaccurate, false, or misleading.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Products</h2>
+                <h3>4.1 Product Descriptions</h3>
+                <p>We strive to accurately describe our Products on the Site. However, we do not warrant that Product descriptions or other content on the Site are accurate, complete, reliable, current, or error-free. If a Product is not as described, your sole remedy is to return it in unused condition.</p>
+                
+                <h3>4.2 Product Availability</h3>
+                <p>All Products are subject to availability. We reserve the right to discontinue any Product at any time. We may limit the quantities of Products available for purchase.</p>
+                
+                <h3>4.3 Product Use</h3>
+                <p>Our Products are intended for legal, educational, and culinary purposes only. You agree to:</p>
+                <ul>
+                    <li>Use Products only as intended and described</li>
+                    <li>Comply with all applicable laws and regulations regarding mushroom cultivation in your jurisdiction</li>
+                    <li>Assume all responsibility and liability for proper identification of mushrooms before consumption</li>
+                    <li>Not use Products for any illegal purpose</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Disclaimer:</strong> Some mushroom species have toxic look-alikes. Proper identification is essential before consumption. HomeGrownShrooms is not responsible for any adverse effects from improper identification or use of our Products.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Orders and Payment</h2>
+                <h3>5.1 Order Acceptance</h3>
+                <p>All orders are subject to acceptance by us. We may refuse or cancel any order for any reason, including but not limited to:</p>
+                <ul>
+                    <li>Product availability</li>
+                    <li>Errors in product or pricing information</li>
+                    <li>Suspected fraud or unauthorized activity</li>
+                    <li>Shipping restrictions to your location</li>
+                </ul>
+                
+                <h3>5.2 Pricing</h3>
+                <p>All prices are in U.S. dollars and are subject to change without notice. We are not responsible for typographical errors regarding price or any other matter.</p>
+                
+                <h3>5.3 Payment Methods</h3>
+                <p>We accept various payment methods as indicated at checkout. You represent and warrant that you have the legal right to use any payment method you provide.</p>
+                
+                <h3>5.4 Taxes</h3>
+                <p>You are responsible for all sales, use, and other taxes associated with your order, except for taxes on our net income.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Shipping and Returns</h2>
+                <h3>6.1 Shipping</h3>
+                <p>Shipping times and costs will be displayed at checkout. We are not responsible for delays caused by carriers or events beyond our control. Risk of loss passes to you upon delivery to the carrier.</p>
+                
+                <h3>6.2 International Orders</h3>
+                <p>International customers are responsible for all customs duties, taxes, and fees. Some Products may not be available for international shipping due to legal restrictions.</p>
+                
+                <h3>6.3 Returns</h3>
+                <p>Our return policy is as follows:</p>
+                <ul>
+                    <li>Unopened kits may be returned within 30 days for a full refund</li>
+                    <li>Opened kits may be returned within 14 days for store credit only</li>
+                    <li>Customers are responsible for return shipping costs</li>
+                    <li>Defective or damaged Products will be replaced at our discretion</li>
+                </ul>
+                
+                <p>Please contact our customer service before returning any Products.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Intellectual Property</h2>
+                <h3>7.1 Site Content</h3>
+                <p>All content on the Site, including text, graphics, logos, images, and software, is our property or the property of our licensors and is protected by copyright and other intellectual property laws.</p>
+                
+                <h3>7.2 Limited License</h3>
+                <p>We grant you a limited, non-exclusive, non-transferable license to access and use the Site for personal, non-commercial purposes. This license does not include any rights to:</p>
+                <ul>
+                    <li>Republish, reproduce, or distribute Site content</li>
+                    <li>Modify or create derivative works</li>
+                    <li>Use data mining or similar data gathering tools</li>
+                </ul>
+                
+                <h3>7.3 Trademarks</h3>
+                <p>"HomeGrownShrooms," our logo, and other marks are our trademarks. You may not use these marks without our prior written permission.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. User Content</h2>
+                <p>Certain areas of the Site may allow you to submit content, such as reviews, photos, or comments ("User Content"). By submitting User Content, you:</p>
+                <ul>
+                    <li>Grant us a perpetual, royalty-free license to use, reproduce, and display the content</li>
+                    <li>Represent that you own or have permission to share the content</li>
+                    <li>Agree the content does not violate any laws or third-party rights</li>
+                </ul>
+                
+                <p>We reserve the right to remove any User Content at our discretion.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Prohibited Conduct</h2>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the Site or Products for any illegal purpose</li>
+                    <li>Violate any laws in your jurisdiction regarding mushroom cultivation</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Interfere with the Site's operation</li>
+                    <li>Engage in any fraudulent activity</li>
+                    <li>Harass, threaten, or harm others</li>
+                    <li>Misrepresent your identity or affiliation</li>
+                    <li>Reverse engineer or decompile any Site technology</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Disclaimer of Warranties</h2>
+                <p>THE SITE AND PRODUCTS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                
+                <p>WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SITE OR SERVERS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+                
+                <p>WE MAKE NO WARRANTIES ABOUT THE ACCURACY, RELIABILITY, COMPLETENESS, OR TIMELINESS OF THE SITE CONTENT OR PRODUCT DESCRIPTIONS.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Mushroom Cultivation Disclaimer:</strong> Mushroom growth depends on many factors beyond our control, including environmental conditions and user practices. We do not guarantee specific yields or results from our Products.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Limitation of Liability</h2>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL HOMEGROWNSHROOMS, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO YOUR USE OF THE SITE OR PRODUCTS, INCLUDING BUT NOT LIMITED TO:</p>
+                <ul>
+                    <li>LOST PROFITS OR REVENUE</li>
+                    <li>LOST DATA</li>
+                    <li>PERSONAL INJURY OR PROPERTY DAMAGE</li>
+                    <li>UNAUTHORIZED ACCESS TO OR USE OF OUR SYSTEMS</li>
+                    <li>ANY CONDUCT OR CONTENT OF THIRD PARTIES</li>
+                </ul>
+                
+                <p>OUR TOTAL LIABILITY FOR ANY CLAIM RELATED TO THE SITE OR PRODUCTS SHALL NOT EXCEED THE AMOUNT YOU PAID TO US IN THE SIX MONTHS PRECEDING THE CLAIM.</p>
+                
+                <p>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO SOME OF THESE LIMITATIONS MAY NOT APPLY TO YOU.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless HomeGrownShrooms and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or related to:</p>
+                <ul>
+                    <li>Your use of the Site or Products</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any laws or third-party rights</li>
+                    <li>Any User Content you submit</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Dispute Resolution</h2>
+                <h3>13.1 Informal Resolution</h3>
+                <p>Before filing any claim, you agree to try to resolve the dispute informally by contacting us at legal@homegrownshrooms.com. We'll try to resolve the dispute within 60 days.</p>
+                
+                <h3>13.2 Arbitration Agreement</h3>
+                <p>Except for certain disputes described below, you and HomeGrownShrooms agree to resolve disputes through binding arbitration rather than in court. This includes claims arising out of or relating to these Terms, the Site, or Products.</p>
+                
+                <h3>13.3 Arbitration Procedures</h3>
+                <p>The American Arbitration Association (AAA) will administer the arbitration under its Commercial Arbitration Rules. The arbitration will be held in Portland, Oregon, and conducted in English.</p>
+                
+                <h3>13.4 Exceptions</h3>
+                <p>Either party may bring suit in court for:</p>
+                <ul>
+                    <li>Claims related to intellectual property rights</li>
+                    <li>Claims for injunctive relief</li>
+                    <li>Small claims court claims</li>
+                </ul>
+                
+                <h3>13.5 Class Action Waiver</h3>
+                <p>All claims must be brought in the parties' individual capacity, not as a plaintiff or class member in any class or representative proceeding.</p>
+                
+                <h3>13.6 Opt-Out</h3>
+                <p>You may opt out of this arbitration agreement within 30 days of first accepting these Terms by emailing us at legal@homegrownshrooms.com with your full name and a clear statement of your opt-out decision.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Governing Law</h2>
+                <p>These Terms and any disputes will be governed by the laws of the State of Oregon, without regard to its conflict of laws principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>15. Changes to Terms</h2>
+                <p>We may modify these Terms at any time. We'll notify you of material changes through the Site or email. Your continued use after changes become effective constitutes acceptance of the new Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>16. General Provisions</h2>
+                <h3>16.1 Entire Agreement</h3>
+                <p>These Terms, along with our Privacy Policy, constitute the entire agreement between you and HomeGrownShrooms regarding the Site and Products.</p>
+                
+                <h3>16.2 Waiver</h3>
+                <p>Our failure to enforce any right or provision will not be considered a waiver of those rights.</p>
+                
+                <h3>16.3 Severability</h3>
+                <p>If any provision is found unenforceable, the remaining provisions will remain in full effect.</p>
+                
+                <h3>16.4 Assignment</h3>
+                <p>You may not assign your rights under these Terms without our prior written consent. We may assign our rights without restriction.</p>
+                
+                <h3>16.5 Force Majeure</h3>
+                <p>We are not liable for any failure to perform due to causes beyond our reasonable control.</p>
+                
+                <h3>16.6 Survival</h3>
+                <p>Sections including but not limited to Intellectual Property, Disclaimer of Warranties, Limitation of Liability, Indemnification, and Dispute Resolution will survive termination of these Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>17. Contact Information</h2>
+                <p>For questions about these Terms, please contact us at:</p>
+                <p>HomeGrownShrooms LLC<br>
+                123 Fungi Lane<br>
+                Portland, OR 97201<br>
+                United States<br>
+                Email: legal@homegrownshrooms.com<br>
+                Phone: (555) 123-4567</p>
+            </div>
+
+            <div class="update-date">
+                <p>These Terms were last updated on July 6, 2023.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>HomeGrownShrooms</h3>
+                    <p>Making mushroom cultivation simple, fun, and accessible for everyone — from beginners to curious foodies.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Shop Kits</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Growing Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <address>
+                        HomeGrownShrooms LLC<br>
+                        123 Fungi Lane<br>
+                        Portland, OR 97201<br>
+                        United States<br><br>
+                        Email: hello@homegrownshrooms.com<br>
+                        Phone: (555) 123-4567
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HomeGrownShrooms. All rights reserved. "Grow. Harvest. Enjoy." and "Fungi Fun for Every Home" are trademarks of HomeGrownShrooms LLC.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

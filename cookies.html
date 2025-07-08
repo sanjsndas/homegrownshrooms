@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - HomeGrownShrooms</title>
+    <style>
+        /* Reuse the same styles from the main page */
+        :root {
+            --earth-brown: #8D6E63;
+            --forest-green: #4CAF50;
+            --cream-white: #FAFAFA;
+            --fungi-orange: #FFA726;
+            --mushroom-gray: #B0BEC5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cream-white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: var(--earth-brown);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--earth-brown);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--forest-green);
+        }
+        
+        /* Cookie Policy Specific Styles */
+        .cookies-header {
+            background-color: var(--forest-green);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .cookies-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cookies-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        
+        .cookies-section {
+            margin-bottom: 40px;
+        }
+        
+        .cookies-section h2 {
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid var(--mushroom-gray);
+            padding-bottom: 10px;
+        }
+        
+        .cookies-section h3 {
+            color: var(--forest-green);
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        .cookies-section h4 {
+            color: var(--earth-brown);
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        
+        .cookies-section p {
+            margin-bottom: 15px;
+        }
+        
+        .cookies-section ul, .cookies-section ol {
+            margin: 15px 0 15px 40px;
+        }
+        
+        .cookies-section ul li, .cookies-section ol li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--forest-green);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .update-date {
+            font-style: italic;
+            color: #666;
+            text-align: right;
+            margin-top: 30px;
+        }
+        
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.9);
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cookie-consent p {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .accept-btn {
+            background-color: var(--forest-green);
+            color: white;
+        }
+        
+        .decline-btn {
+            background-color: var(--mushroom-gray);
+            color: #333;
+        }
+        
+        .settings-btn {
+            background-color: transparent;
+            color: var(--fungi-orange);
+            border: 1px solid var(--fungi-orange);
+        }
+        
+        .cookie-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--earth-brown);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .cookies-content {
+                padding: 30px;
+            }
+            
+            .cookies-header h1 {
+                font-size: 32px;
+            }
+            
+            .cookies-section h2 {
+                font-size: 24px;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent p {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>HomeGrownShrooms</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cookies-header">
+        <div class="container">
+            <h1>Cookie Policy</h1>
+            <p>Last Updated: July 6, 2023</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="cookies-content">
+            <div class="cookies-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to the Cookie Policy of HomeGrownShrooms ("Company," "we," "our," or "us"). This policy explains how we use cookies and similar tracking technologies when you visit our website homegrownshrooms.com (the "Site").</p>
+                
+                <p>By using our Site, you consent to the use of cookies in accordance with this policy. If you do not agree to our use of cookies, you should adjust your browser settings accordingly or refrain from using our Site.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>What are cookies?</strong> Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</p>
+                </div>
+            </div>
+
+            <div class="cookies-section">
+                <h2>2. Types of Cookies We Use</h2>
+                <h3>2.1 Essential Cookies</h3>
+                <p>These cookies are strictly necessary to provide you with services available through our Site and to enable you to use some of its features. Without these cookies, services you have asked for cannot be provided.</p>
+                <p>Examples include:</p>
+                <ul>
+                    <li>Authentication cookies to keep you logged in during your visit</li>
+                    <li>Session cookies that remember your actions during a browsing session</li>
+                    <li>Security cookies used to detect malicious activities</li>
+                    <li>Load-balancing cookies for server management</li>
+                </ul>
+                
+                <h3>2.2 Performance Cookies</h3>
+                <p>These cookies collect information about how visitors use our Site, such as which pages are visited most often or if error messages are received. These cookies don't collect information that identifies a visitor.</p>
+                <p>Examples include:</p>
+                <ul>
+                    <li>Google Analytics cookies for traffic analysis</li>
+                    <li>Heatmap tracking cookies for user behavior analysis</li>
+                    <li>Error reporting cookies to identify site issues</li>
+                </ul>
+                
+                <h3>2.3 Functionality Cookies</h3>
+                <p>These cookies allow our Site to remember choices you make and provide enhanced, more personal features. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites.</p>
+                <p>Examples include:</p>
+                <ul>
+                    <li>Language preference cookies</li>
+                    <li>Region selection cookies for localized content</li>
+                    <li>Layout customization cookies</li>
+                </ul>
+                
+                <h3>2.4 Targeting/Advertising Cookies</h3>
+                <p>These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns.</p>
+                <p>Examples include:</p>
+                <ul>
+                    <li>Facebook Pixel cookies for ad targeting</li>
+                    <li>Google Ads conversion tracking cookies</li>
+                    <li>Retargeting cookies for previous visitors</li>
+                </ul>
+            </div>
+
+            <div class="cookies-section">
+                <h2>3. Detailed Cookie List</h2>
+                <p>The table below provides more information about the cookies we use and why:</p>
+                
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                    <thead>
+                        <tr style="background-color: var(--forest-green); color: white;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Cookie Name</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Purpose</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Duration</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">session_id</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Maintains user session state</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Session</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Essential</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">_ga</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Google Analytics tracking</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">2 years</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Performance</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">_gid</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Google Analytics session tracking</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">24 hours</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Performance</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">lang</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Stores language preference</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">1 year</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Functionality</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">fbp</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Facebook Pixel advertising</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">3 months</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Targeting</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cookies-section">
+                <h2>4. How We Use Cookies</h2>
+                <p>We use cookies for various purposes, including:</p>
+                
+                <h3>4.1 Site Functionality</h3>
+                <p>To enable certain functions of the Site, such as remembering your login details, maintaining your shopping cart, and allowing you to make purchases. Without these cookies, essential services cannot be provided.</p>
+                <p>For example, when you add items to your cart, cookies ensure those items remain in your cart as you browse different pages. Session cookies also help maintain your secure connection to our server throughout your visit.</p>
+                
+                <h3>4.2 Performance Monitoring</h3>
+                <p>To monitor and analyze Site performance and user behavior to improve our services. This includes tracking page load times, navigation paths, and identifying technical issues.</p>
+                <p>We use aggregated analytics data to understand which products are most popular, which pages need optimization, and how users flow through our conversion funnels. This helps us prioritize development resources.</p>
+                
+                <h3>4.3 Personalization</h3>
+                <p>To remember your preferences and personalize your experience on our Site. This includes displaying content in your preferred language or showing products relevant to your region.</p>
+                <p>For returning visitors, we may use cookies to display recently viewed items or suggest complementary products based on your browsing history. This personalization enhances your shopping experience.</p>
+                
+                <h3>4.4 Advertising</h3>
+                <p>To deliver targeted advertising based on your browsing habits and interests. These cookies track your visits to our Site and other websites in the advertising network.</p>
+                <p>We may use this information to show you ads for our products when you visit other sites, or to limit how often you see the same ad. This helps make our marketing more efficient and relevant.</p>
+                
+                <h3>4.5 Social Media Integration</h3>
+                <p>To enable you to share content from our Site on social media platforms and to track the effectiveness of these integrations. Social media cookies may track your browsing even when you don't interact with them.</p>
+                <p>These cookies allow features like the Facebook "Like" button to work properly. They may also be used by social media platforms to build a profile of your interests for targeted advertising.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>5. Third-Party Cookies</h2>
+                <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the Site, deliver advertisements, and provide other services.</p>
+                
+                <h3>5.1 Analytics Providers</h3>
+                <p>We use Google Analytics to help analyze how users use the Site. These cookies collect standard internet log information and visitor behavior in an anonymous form.</p>
+                <p>The information generated by these cookies about your use of the Site (including your IP address) is transmitted to Google. This information is then used to evaluate visitors' use of the Site and compile statistical reports.</p>
+                
+                <h3>5.2 Advertising Networks</h3>
+                <p>We work with advertising partners to serve ads on our behalf across the internet. These partners may use cookies to collect information about your activities to provide you targeted advertising.</p>
+                <p>For example, if you visit a page about oyster mushroom kits, you might later see ads for our oyster mushroom products on other websites. This is called "retargeting" or "remarketing."</p>
+                
+                <h3>5.3 Social Media Platforms</h3>
+                <p>Social media platforms like Facebook and Pinterest may set cookies through our Site for sharing content or for advertising purposes. These cookies allow these platforms to track your browsing across sites.</p>
+                <p>We use these integrations to make it easy to share our content and to measure the effectiveness of our social media campaigns. The social media platforms may use this data for their own purposes.</p>
+                
+                <h3>5.4 Payment Processors</h3>
+                <p>When you make payments on our Site, payment processors like PayPal and Stripe may set cookies to facilitate the transaction and for fraud prevention purposes.</p>
+                <p>These cookies are essential for processing your payment securely and efficiently. They may also be used by the payment processors to personalize your experience across sites that use their services.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>6. Cookie Duration</h2>
+                <p>Cookies may be either "persistent" or "session" cookies. Persistent cookies remain on your device for the period specified in the cookie, while session cookies are deleted when you close your browser.</p>
+                
+                <h3>6.1 Session Cookies</h3>
+                <p>These temporary cookies are erased when you close your browser. They allow our Site to link your actions during a browser session but are not stored long-term.</p>
+                <p>We use session cookies for security purposes (like preventing cross-site request forgery) and to maintain your shopping cart contents while you browse. Without these cookies, the Site would treat each page view as a new visitor.</p>
+                
+                <h3>6.2 Persistent Cookies</h3>
+                <p>These cookies remain on your device between browsing sessions. They enable our Site to recognize you when you return and remember your preferences.</p>
+                <p>Persistent cookies have varying lifespans, from a few days to several years. We set reasonable expiration dates based on the purpose of each cookie. For example, language preference cookies might last a year, while analytics cookies might last two years.</p>
+                
+                <h3>6.3 Flash Cookies</h3>
+                <p>Certain features of our Site may use local stored objects (or Flash cookies) to collect and store information about your preferences. Flash cookies are not managed by the same browser settings as regular cookies.</p>
+                <p>If we use Flash cookies, they typically serve purposes like remembering your volume settings for video content. You can manage Flash cookies through the Adobe Flash Player Settings Manager.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>7. Managing Cookies</h2>
+                <p>You have several options for managing cookies on your device. Most browsers allow you to control cookies through their settings preferences.</p>
+                
+                <h3>7.1 Browser Settings</h3>
+                <p>You can set or amend your web browser controls to accept or refuse cookies. The methods for doing so vary from browser to browser, and from version to version.</p>
+                <p>Typically, you can find these controls in your browser's "Options" or "Preferences" menu. More information may be available through your browser's "Help" function or through sites like allaboutcookies.org.</p>
+                
+                <h3>7.2 Opting Out of Analytics</h3>
+                <p>To opt out of Google Analytics tracking across all websites, you can install the Google Analytics Opt-out Browser Add-on. This prevents the Google Analytics JavaScript from sharing information.</p>
+                <p>For other analytics providers, check their respective websites for opt-out mechanisms. Many offer browser extensions or cookie-based opt-out solutions.</p>
+                
+                <h3>7.3 Advertising Opt-Out</h3>
+                <p>The Digital Advertising Alliance offers tools to opt out of interest-based advertising from participating companies (aboutads.info/choices). The Network Advertising Initiative also provides an opt-out tool (optout.networkadvertising.org).</p>
+                <p>These opt-outs are cookie-based, meaning if you clear your cookies or use a different browser, you'll need to opt out again. They also only apply to participating companies.</p>
+                
+                <h3>7.4 Mobile Device Controls</h3>
+                <p>On mobile devices, you may have additional controls in your device's operating system to limit ad tracking. These are typically found in the "Privacy" or "Ads" section of your settings.</p>
+                <p>iOS users can enable "Limit Ad Tracking," while Android users can opt out of "Ads Personalization." These settings prevent the use of your advertising ID for interest-based ads.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>8. Consequences of Disabling Cookies</h2>
+                <p>If you choose to disable cookies, some features of our Site may not function properly or may become unavailable.</p>
+                
+                <h3>8.1 Site Functionality Impacts</h3>
+                <p>Essential features like logging into your account, adding items to your cart, and completing purchases may not work without certain cookies enabled.</p>
+                <p>Pages may load more slowly as the server cannot optimize content delivery based on your connection speed. Form submissions might fail without security cookies that prevent cross-site request forgery.</p>
+                
+                <h3>8.2 Personalization Impacts</h3>
+                <p>Without functionality cookies, the Site won't remember your preferences like language, region, or layout choices. You may need to re-enter this information each time you visit.</p>
+                <p>Product recommendations and personalized content will be less relevant, as the Site cannot reference your browsing history or past purchases.</p>
+                
+                <h3>8.3 Performance Impacts</h3>
+                <p>We won't be able to gather data about how you use our Site, making it harder for us to identify and fix problems or optimize the user experience.</p>
+                <p>Error reporting may be less effective, meaning we might not detect issues you encounter unless you specifically report them to us.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.</p>
+                
+                <h3>9.1 Notification of Changes</h3>
+                <p>When we make material changes to this policy, we'll notify you through a banner on our Site or via email if the changes significantly affect your privacy rights.</p>
+                <p>The "Last Updated" date at the top of this policy indicates when it was last revised. We encourage you to review this policy periodically.</p>
+                
+                <h3>9.2 Continued Use</h3>
+                <p>Your continued use of our Site after any changes to this Cookie Policy constitutes your acceptance of the revised policy, including any new uses of cookies.</p>
+                <p>If you disagree with any changes, you should adjust your browser settings to manage cookies as desired or discontinue using our Site.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>10. Contact Information</h2>
+                <p>If you have any questions about our use of cookies or this policy, please contact us:</p>
+                
+                <h3>10.1 Data Protection Officer</h3>
+                <p>For privacy-specific concerns, you may contact our Data Protection Officer at:</p>
+                <p>Email: dpo@homegrownshrooms.com<br>
+                Phone: (555) 123-4567 ext. 101<br>
+                Mail: Attn: Data Protection Officer, HomeGrownShrooms LLC, 123 Fungi Lane, Portland, OR 97201</p>
+                
+                <h3>10.2 General Inquiries</h3>
+                <p>For general questions about cookies or website functionality:</p>
+                <p>Email: support@homegrownshrooms.com<br>
+                Phone: (555) 123-4567<br>
+                Online Contact Form: homegrownshrooms.com/contact</p>
+            </div>
+
+            <div class="update-date">
+                <p>This Cookie Policy was last updated on July 6, 2023.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>HomeGrownShrooms</h3>
+                    <p>Making mushroom cultivation simple, fun, and accessible for everyone — from beginners to curious foodies.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Shop Kits</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Growing Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <address>
+                        HomeGrownShrooms LLC<br>
+                        123 Fungi Lane<br>
+                        Portland, OR 97201<br>
+                        United States<br><br>
+                        Email: hello@homegrownshrooms.com<br>
+                        Phone: (555) 123-4567
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HomeGrownShrooms. All rights reserved. "Grow. Harvest. Enjoy." and "Fungi Fun for Every Home" are trademarks of HomeGrownShrooms LLC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. You can manage your preferences at any time.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn decline-btn" id="declineCookies">Decline</button>
+            <button class="cookie-btn settings-btn" id="cookieSettings">Settings</button>
+            <button class="cookie-btn accept-btn" id="acceptCookies">Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent Functions
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+            const cookieSettings = document.getElementById('cookieSettings');
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieConsent.style.display = 'flex';
+            }
+            
+            // Accept all cookies
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.style.display = 'none';
+                // Here you would also set all cookies
+            });
+            
+            // Decline non-essential cookies
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieConsent.style.display = 'none';
+                // Here you would block non-essential cookies
+            });
+            
+            // Open cookie settings (would link to a detailed settings page)
+            cookieSettings.addEventListener('click', function() {
+                alert('Cookie settings would open a modal with granular controls. On a real site, this would allow users to select which types of cookies to accept.');
+            });
+            
+            // Close banner if clicked outside
+            document.addEventListener('click', function(e) {
+                if (!cookieConsent.contains(e.target) && e.target !== cookieConsent) {
+                    cookieConsent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

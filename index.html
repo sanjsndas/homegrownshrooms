@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeGrownShrooms - Grow. Harvest. Enjoy.</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --earth-brown: #8D6E63;
+            --forest-green: #4CAF50;
+            --cream-white: #FAFAFA;
+            --fungi-orange: #FFA726;
+            --mushroom-gray: #B0BEC5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cream-white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: var(--earth-brown);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--earth-brown);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--forest-green);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('p1.avif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--fungi-orange);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff9800;
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .secondary-button:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Main Content Sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--earth-brown);
+            font-size: 36px;
+        }
+        
+        .kits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .kit-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .kit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .kit-image {
+            height: 200px;
+            background-color: var(--mushroom-gray);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .kit-info {
+            padding: 20px;
+        }
+        
+        .kit-info h3 {
+            color: var(--earth-brown);
+            margin-bottom: 10px;
+        }
+        
+        .kit-info p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: var(--forest-green);
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* How It Works Section */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+        
+        .step-number {
+            background-color: var(--forest-green);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--forest-green);
+            color: white;
+        }
+        
+        .benefits .section-title {
+            color: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        /* Community Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-color: var(--mushroom-gray);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+        
+        /* Blog/Recipes Section */
+        .recipes {
+            background-color: #f5f5f5;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .recipe-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .recipe-content {
+            padding: 20px;
+        }
+        
+        .recipe-content h3 {
+            color: var(--earth-brown);
+            margin-bottom: 10px;
+        }
+        
+        .recipe-content .meta {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        /* Interactive Features */
+        .features {
+            text-align: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--fungi-orange);
+            margin-bottom: 20px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--earth-brown);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        /* Disclaimer Section */
+        .disclaimer {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .disclaimer h2 {
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        /* Customer Satisfaction */
+        .satisfaction {
+            text-align: center;
+            padding: 60px 0;
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        
+        .satisfaction h2 {
+            color: var(--forest-green);
+            margin-bottom: 20px;
+        }
+        
+        .guarantee {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>HomeGrownShrooms</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Grow. Harvest. Enjoy.</h2>
+            <p>Fresh, organic mushrooms from your kitchen or balcony — no experience needed!</p>
+            <a href="#" class="cta-button">Shop Kits</a>
+            <a href="#" class="cta-button secondary-button">How It Works</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Our Mushroom Growing Kits</h2>
+        <div class="kits-grid">
+            <div class="kit-card">
+                <div class="kit-image" style="background-image: url('p2.avif');"></div>
+                <div class="kit-info">
+                    <h3>Oyster Mushroom Kit</h3>
+                    <p>Perfect for beginners with fast growth and high yields of delicious oyster mushrooms.</p>
+                    <span class="price">$29.99</span>
+                    <a href="#" class="cta-button">Get Growing</a>
+                </div>
+            </div>
+            <div class="kit-card">
+                <div class="kit-image" style="background-image: url('p3.avif');"></div>
+                <div class="kit-info">
+                    <h3>Shiitake Mushroom Kit</h3>
+                    <p>Grow meaty, flavorful shiitakes right at home with our premium hardwood substrate.</p>
+                    <span class="price">$34.99</span>
+                    <a href="#" class="cta-button">Get Growing</a>
+                </div>
+            </div>
+            <div class="kit-card">
+                <div class="kit-image" style="background-image: url('p4.webp');"></div>
+                <div class="kit-info">
+                    <h3>Lion's Mane Kit</h3>
+                    <p>Grow this brain-boosting, seafood-flavored mushroom with our easy-to-use kit.</p>
+                    <span class="price">$39.99</span>
+                    <a href="#" class="cta-button">Get Growing</a>
+                </div>
+            </div>
+            <div class="kit-card">
+                <div class="kit-image" style="background-image: url('p5.avif');"></div>
+                <div class="kit-info">
+                    <h3>Gourmet Variety Pack</h3>
+                    <p>Three kits in one: oyster, shiitake, and lion's mane for the ultimate mushroom experience.</p>
+                    <span class="price">$89.99</span>
+                    <a href="#" class="cta-button">Get Growing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Growing your own mushrooms has never been easier. Our kits come with everything you need for a successful harvest in just a few simple steps.</p>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Open Your Kit</h3>
+                <p>Unbox your mushroom growing kit and find your substrate block, humidity tent, and detailed instructions.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Set Up</h3>
+                <p>Place your kit in the perfect spot (we'll help you find it) and prepare it for growth with a simple misting.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Watch Them Grow</h3>
+                <p>In just 7-14 days, you'll see tiny mushrooms (pins) form and grow to harvest size.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Harvest & Enjoy</h3>
+                <p>Pick your mushrooms at peak freshness and enjoy them in your favorite recipes!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Grow Your Own Mushrooms?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Unmatched Freshness</h3>
+                    <p>Harvest mushrooms at their absolute peak of freshness, flavor, and nutritional value — something store-bought mushrooms can never match.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Organic & Sustainable</h3>
+                    <p>Our kits use organic substrates and sustainable practices, giving you peace of mind about what you're eating.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Educational Fun</h3>
+                    <p>A fascinating way to learn about mycology and the incredible life cycle of fungi — perfect for families and curious minds.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Space Efficient</h3>
+                    <p>Grow delicious mushrooms even in small apartments — they thrive on kitchen counters, windowsills, or balconies.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Multiple Harvests</h3>
+                    <p>Most kits produce 2-3 flushes of mushrooms, giving you weeks of fresh harvests from a single purchase.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Eco-Friendly</h3>
+                    <p>Reduce food miles and packaging waste by growing your own food at home with our compostable kits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="recipes">
+        <div class="container">
+            <h2 class="section-title">Mushroom Recipes & Blog</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Discover delicious ways to enjoy your homegrown mushrooms with our favorite recipes and growing tips.</p>
+            
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image" style="background-image: url('p6.webp');"></div>
+                    <div class="recipe-content">
+                        <h3>Creamy Oyster Mushroom Pasta</h3>
+                        <div class="meta">Prep: 10 mins | Cook: 20 mins | Serves: 4</div>
+                        <p>A luxurious pasta dish that highlights the delicate flavor of fresh oyster mushrooms with a creamy garlic sauce.</p>
+                        <a href="#" class="cta-button" style="display: inline-block; margin-top: 15px; padding: 8px 20px; font-size: 14px;">View Recipe</a>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-image" style="background-image: url('p7.webp');"></div>
+                    <div class="recipe-content">
+                        <h3>Shiitake Mushroom Stir-Fry</h3>
+                        <div class="meta">Prep: 15 mins | Cook: 10 mins | Serves: 4</div>
+                        <p>Quick and flavorful Asian-inspired stir-fry featuring meaty shiitake mushrooms and crisp vegetables.</p>
+                        <a href="#" class="cta-button" style="display: inline-block; margin-top: 15px; padding: 8px 20px; font-size: 14px;">View Recipe</a>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-image" style="background-image: url('p8.avif');"></div>
+                    <div class="recipe-content">
+                        <h3>Lion's Mane "Crab" Cakes</h3>
+                        <div class="meta">Prep: 20 mins | Cook: 15 mins | Serves: 4</div>
+                        <p>Vegan crab cakes made with lion's mane mushrooms that have an uncanny seafood-like flavor and texture.</p>
+                        <a href="#" class="cta-button" style="display: inline-block; margin-top: 15px; padding: 8px 20px; font-size: 14px;">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Our Interactive Features</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We've developed special tools to make your mushroom growing journey even more successful and enjoyable.</p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Grow Tracker</h3>
+                <p>Our visual timeline helps you track your mushroom's progress and know exactly what to expect each day.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Shroom Selector</h3>
+                <p>Answer a few questions and we'll recommend the perfect mushroom kit for your space and taste preferences.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📸</div>
+                <h3>Community Gallery</h3>
+                <p>Upload photos of your harvest and browse thousands of homegrown mushrooms from our community.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Expert Support</h3>
+                <p>Get real-time help from our mushroom growing experts whenever you have questions or concerns.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="disclaimer">
+            <h2>Important Disclaimer</h2>
+            <p>HomeGrownShrooms provides mushroom growing kits for gourmet and medicinal mushroom varieties that are legal to cultivate in most jurisdictions. However, it is the responsibility of the customer to ensure compliance with all local, state, and federal laws regarding mushroom cultivation in their area.</p>
+            
+            <p>Our kits are intended for educational and culinary purposes only. We do not provide any medical advice, and none of our products or information should be construed as medical treatment or advice. The health benefits mentioned on our website are based on general research about mushroom varieties and are not evaluated by the FDA.</p>
+            
+            <p>While we take every precaution to ensure our kits contain the correct mushroom species, customers should always properly identify any mushrooms they cultivate before consumption. Some mushroom species have toxic look-alikes, and proper identification is essential for safe consumption.</p>
+            
+            <p>HomeGrownShrooms is not responsible for any adverse effects, allergic reactions, or unintended consequences resulting from the cultivation or consumption of mushrooms grown from our kits. Customers use our products at their own risk.</p>
+            
+            <p>Our kits are not toys and should be kept out of reach of children and pets. Some mushroom spores or mycelium may cause allergic reactions in sensitive individuals. Proper hygiene should be maintained when handling mushroom growing materials.</p>
+            
+            <p>By purchasing and using our mushroom growing kits, you acknowledge that you have read and understood this disclaimer and agree to assume all responsibility for the cultivation and use of mushrooms grown from our products.</p>
+            
+            <p>We reserve the right to refuse service to anyone who we believe may intend to use our products for illegal purposes. All sales are final unless otherwise specified, and refunds are issued at our discretion based on our satisfaction guarantee policy.</p>
+            
+            <p>For any questions or concerns regarding this disclaimer, please contact our customer service team before making a purchase.</p>
+        </div>
+    </section>
+
+    <section class="satisfaction">
+        <div class="container">
+            <h2>Customer Satisfaction Guarantee</h2>
+            <p class="guarantee">We stand behind our mushroom growing kits with a 100% satisfaction guarantee. If your kit doesn't produce mushrooms as described, we'll replace it or refund your purchase — no questions asked.</p>
+            <a href="#" class="cta-button">Contact Our Support Team</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>HomeGrownShrooms</h3>
+                    <p>Making mushroom cultivation simple, fun, and accessible for everyone — from beginners to curious foodies.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Shop Kits</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Growing Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <address>
+                        HomeGrownShrooms LLC<br>
+                        123 Fungi Lane<br>
+                        Portland, OR 97201<br>
+                        United States<br><br>
+                        Email: hello@homegrownshrooms.com<br>
+                        Phone: (555) 123-4567
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HomeGrownShrooms. All rights reserved. "Grow. Harvest. Enjoy." and "Fungi Fun for Every Home" are trademarks of HomeGrownShrooms LLC.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
